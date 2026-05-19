@@ -53,6 +53,7 @@
 #include <freerdp/server/telemetry.h>
 #include <freerdp/server/rdpgfx.h>
 #include <freerdp/server/disp.h>
+#include <freerdp/server/gfxredir.h>
 
 #if defined(CHANNEL_RDPECAM_SERVER)
 #include <freerdp/server/rdpecam-enumerator.h>
@@ -84,6 +85,9 @@ void freerdp_channels_dummy(void)
 	CamDevEnumServerContext* camera_enumerator;
 	CameraDeviceServerContext* camera_device;
 #endif
+#ifdef WITH_CHANNEL_GFXREDIR
+	GfxRedirServerContext* gfxredir;
+#endif // WITH_CHANNEL_GFXREDIR
 	audin = audin_server_context_new(NULL);
 	audin_server_context_free(audin);
 	rdpsnd = rdpsnd_server_context_new(NULL);
@@ -124,6 +128,10 @@ void freerdp_channels_dummy(void)
 		ainput_server_context_free(ainput);
 	}
 #endif
+#ifdef WITH_CHANNEL_GFXREDIR
+	gfxredir = gfxredir_server_context_new(NULL);
+	gfxredir_server_context_free(gfxredir);
+#endif // WITH_CHANNEL_GFXREDIR
 }
 
 /**

@@ -70,6 +70,8 @@
 
 #cmakedefine WITH_VAAPI
 
+#cmakedefine WITH_CHANNEL_GFXREDIR
+
 /* Plugins */
 #cmakedefine BUILTIN_CHANNELS
 #cmakedefine WITH_RDPDR
@@ -99,6 +101,9 @@
 #cmakedefine CHANNEL_ENCOMSP
 #cmakedefine CHANNEL_ENCOMSP_CLIENT
 #cmakedefine CHANNEL_ENCOMSP_SERVER
+#cmakedefine CHANNEL_GFXREDIR
+#cmakedefine CHANNEL_GFXREDIR_CLIENT
+#cmakedefine CHANNEL_GFXREDIR_SERVER
 #cmakedefine CHANNEL_PARALLEL
 #cmakedefine CHANNEL_PARALLEL_CLIENT
 #cmakedefine CHANNEL_PARALLEL_SERVER
